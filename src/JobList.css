@@ -3,24 +3,27 @@
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 60px;
-    height: 80%; /* Set the desired height */
-  width: 50%; /* Set the desired width */
-  background-color: pink; /* Set the desired background color */ 
-  margin: 0 auto;
+    width: 50%; 
+    background-color: pink; 
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-sizing: border-box;
   }
   .search-container {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 50px;
-    background-color: lightcoral; /* Set the desired background color */
+    background-color: lightcoral; 
     padding: 20px;
-    margin: 0 auto; /* Center the search container horizontally */ /* Add padding for better visual appearance */
+    margin: 0 auto;
+    margin: 20px auto 0;  
   }
   
   .search-input {
     padding: 10px;
     margin-bottom: 10px; 
-   
   }
 
   .clear-button {
@@ -42,21 +45,30 @@
     background: #FFFFFF;
     box-shadow: 3px 3px 10px 0px #0000001A;
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 10px;  
   }
   
   .left-side{
-    margin-right: 100px;
+    margin-right: 10px; 
+    margin-top: -10px; 
+    margin-left: 0;
+   align-items: center;
+  }
+
+  img {
+    margin-right: 20px; 
+    margin-left: 10px; 
   }
 
   .left-side p{
     color: pink;
+    margin-bottom: 0;
   }
 
   .left-side h5{
     color: green;
     line-height: 1px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .job-details {
     margin-left: 20px;
@@ -67,30 +79,36 @@
   }
   h2 {
     margin-bottom: 10px;
-    flex-basis: 100%; /* Full width for h2 */ /* Add space between h2 and job-info */
+    flex-basis: 100%; 
   }
 
   .job-info {
-    display: flex;
-    flex-basis: 100%; /* Full width for job-info */
-    font-size: 0.8em; /* Smaller font size for job-info */
-    /* Center items vertically */
+    font-size: 0.6em; 
+    align-items: flex-start;
   }
   
   .skills {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px; 
    
   }
   .skills p {
-    margin-right: 5px;
-    padding: 5px;
-    border: 5px solid lightcoral;
-    color: pink;
-    font-size: 0.8em;
+  margin-right: 10px; 
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 5px solid lightcoral;
+  color: pink;
+  font-size: 0.8em;
+
   }
   .job-info p {
-    margin-right: 10px; /* Add space between job info items */
+    margin-right: 10px;
+    margin-bottom: 5px; 
   }
   
+  .job-info h5 {
+    margin-top: 10px; 
+  }
   
   

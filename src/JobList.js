@@ -1,7 +1,6 @@
-// JobList.js
 import React, { useState, useEffect } from 'react';
 import './JobList.css';
-import accountLogo from './images/insure.svg'
+
 
 const JobList = () => {
   const [jobListings, setJobListings] = useState([]);
@@ -19,7 +18,6 @@ const JobList = () => {
   }, []);
 
   useEffect(() => {
-    // Filter job listings based on the search term
     const filteredListings = jobListings.filter((job) =>
       job.position.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -27,7 +25,6 @@ const JobList = () => {
   }, [searchTerm, jobListings]);
 
   const clearFilter = () => {
-    // Clear the filter and show all job listings
     setSearchTerm('');
   };
 
@@ -43,35 +40,28 @@ const JobList = () => {
       />
       <button onClick={clearFilter} className='clear-button'>Clear Filter</button>
       </div>
-      
       <div>
-        
         {filteredJobListings.map((job) => (
           <div key={job.id} className='job-listing'>
-            <img src={accountLogo} alt="Company Logo" />
+             <img src={job.logo} alt="Company Logo" />
             <div className='left-side'>
             <p>{job.company}</p>
             <h5>{job.position}</h5>
             </div>
-            
-            {/* <div className="job-info">
-              <p>{job.role}</p>
+            <div className="job-info">
               <p>{job.level}</p>
               <p>{job.postedAt}</p>
               <p>{job.contract}</p>
               <p>{job.location}</p>
-            </div> */}
+            </div>
             <div className="skills">
             {job.languages.map((language, index) => (
               <p key={index}>{language}</p>
             ))}
-              {/* <p>{job.languages.join(', ')}</p> */}
-              {/* <p>{job.tools.join(', ')}</p> */}
               {job.tools.map((tool, index) => (
               <p key={index}>{tool}</p>
             ))}
             </div>
-           
           </div>
         ))}
       </div>
